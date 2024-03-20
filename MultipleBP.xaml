@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="MultipleBP" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1311.2,826.4" sap2010:WorkflowViewState.IdRef="MultipleBP_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="MultipleBP" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1103.2,648.8" sap2010:WorkflowViewState.IdRef="MultipleBP_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -27,6 +27,7 @@
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -75,9 +76,10 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MultipleBP" sap:VirtualizedContainerService.HintSize="547.2,586.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MultipleBP" sap:VirtualizedContainerService.HintSize="513.6,584" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(x:String)" Name="listBP" />
     </Sequence.Variables>
@@ -86,43 +88,44 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="484.8,83.2" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="451.2,123.2" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:List(x:String)">[listBP]</OutArgument>
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="scg:List(x:String)" xml:space="preserve">[New List(Of String) From 
 {
-	"amadeustjqbkkiq317o",
-	"amadeustjqbkkiq34ab",
-	"amadeustjqbkkiq317l",
-	"amadeustjqbkkok21r1",
-	"amadeustjqjkttv28aa",
-	"amadeustjqkultv28aa",
-	"amadeustjqkultv28ab",
-	"amadeustjqsgntv2001",
-	"amadeustjqsintv2100"
+	"citibankvccprojectnameandpicdata",
+	"wp-dreconciliationiataid02",
+	"wp-dreconciliationiatasg02",
+	"wp-dreconciliationiatath02",
+	"wp-dreconciliationiatamy02",
+	"wp-dreconciliationiatavn02"
 }]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="484.8,351.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[listBP]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="451.2,372" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[listBP]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="bp" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,223.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Main.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Main.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Main.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,136.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Main.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="in_OrchestratorQueueName" />
                 <InArgument x:TypeArguments="x:String" x:Key="in_OrchestratorQueueFolder" />
-                <InArgument x:TypeArguments="x:String" x:Key="in_BPKey">[bp]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_ProductType">Transport</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_BPKey">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="bp" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_ProductType">
+                  <Literal x:TypeArguments="x:String">Transport</Literal>
+                </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>
