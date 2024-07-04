@@ -25,7 +25,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>855.2,1560</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,1199.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="72">
@@ -121,12 +121,9 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Mail Error" sap:VirtualizedContainerService.HintSize="473.6,1495.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence DisplayName="Mail Error" sap:VirtualizedContainerService.HintSize="473.6,1134.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="htmlBody" />
-      <Variable x:TypeArguments="x:String" Name="mailUsrname" />
-      <Variable x:TypeArguments="ss:SecureString" Name="mailPwd" />
-      <Variable x:TypeArguments="x:String" Name="mailServer" />
       <Variable x:TypeArguments="ss:SecureString" Name="pwd" />
       <Variable x:TypeArguments="x:String" Name="usrname" />
     </Sequence.Variables>
@@ -136,9 +133,9 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Mail Error" sap:VirtualizedContainerService.HintSize="411.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;STEP : Mail Error&quot;]" />
-    <ui:Comment sap:VirtualizedContainerService.HintSize="411.2,56" sap2010:WorkflowViewState.IdRef="Comment_1" Text="TODO : Setup credential in orchestrator" />
-    <ui:GetRobotCredential AssetName="[in_credMail]" CacheStrategy="None" DisplayName="Get Credential Email" sap:VirtualizedContainerService.HintSize="411.2,376" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[pwd]" Username="[usrname]">
+    <ui:LogMessage DisplayName="Log Message Mail Error" sap:VirtualizedContainerService.HintSize="411.2,124.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;STEP : Mail Error&quot;]" />
+    <ui:Comment sap:VirtualizedContainerService.HintSize="411.2,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="TODO : Setup credential in orchestrator" />
+    <ui:GetRobotCredential AssetName="[in_credMail]" CacheStrategy="None" DisplayName="Get Credential Email" sap:VirtualizedContainerService.HintSize="411.2,174.4" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[pwd]" Username="[usrname]">
       <ui:GetRobotCredential.TimeoutMS>
         <InArgument x:TypeArguments="x:Int32" />
       </ui:GetRobotCredential.TimeoutMS>

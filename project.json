@@ -1,5 +1,6 @@
 {
   "name": "Traveloka_DataAutomation_Dispatcher_Gsheet",
+  "projectId": "e7ca4937-8faa-4b5d-aee9-60537f46294f",
   "description": "Traveloka_DataAutomation_Dispatcher_Gsheet",
   "main": "Main.xaml",
   "dependencies": {
@@ -22,6 +23,7 @@
     "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
@@ -43,7 +45,8 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": false
+    "modernBehavior": false,
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
